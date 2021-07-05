@@ -2,12 +2,28 @@
 
 The easiest way to dploy any Node.js application is by using `dploy-node-app`. This CLI tool enables you to quickly dploy any Node.js application to any server, with everything set up for you.
 
+## Motivations
+
+## Design goals
+
 ## Usage
 
 To get started, use the following command inside any node.js root folder:
 
 ```bash
 npx dploy-node-app
+```
+
+### Run in development
+
+In one terminal run dev script and in another one run start script to test
+
+```bash
+npm run dev
+```
+
+```bash
+npm start
 ```
 
 ### TODO
