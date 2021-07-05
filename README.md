@@ -1,27 +1,51 @@
 # Dploy Node App
 
 The easiest way to dploy any Node.js application is by using `dploy-node-app`. This CLI tool enables you to quickly dploy any Node.js application to any server, with everything set up for you.
-To get started, use the following command:
+
+## Usage
+
+To get started, use the following command inside any node.js root folder:
 
 ```bash
 npx dploy-node-app
 ```
 
-## Options
+### TODO
 
-`dploy-node-app` comes with the following options:
-
-- **--ts, --typescript** - Initialize as a TypeScript project.
-- **-e, --example [name]|[github-url]** - An example to bootstrap the app with. You can use an example name from the [Next.js repo](https://github.com/vercel/next.js/tree/master/examples) or a GitHub URL. The URL can use any branch and/or subdirectory.
-- **--example-path &lt;path-to-example&gt;** - In a rare case, your GitHub URL might contain a branch name with a slash (e.g. bug/fix-1) and the path to the example (e.g. foo/bar). In this case, you must specify the path to the example separately: `--example-path foo/bar`
-- **--use-npm** - Explicitly tell the CLI to bootstrap the app using npm. To bootstrap using yarn we recommend to run `yarn create next-app`
-
-## Why use Dploy Node App?
-
-`dploy-node-app` allows you to create a new Next.js app within seconds. It is officially maintained by the creators of Next.js, and includes a number of benefits:
-
-- **Interactive Experience**: Running `npx create-next-app` (with no arguments) launches an interactive experience that guides you through setting up a project.
-- **Zero Dependencies**: Initializing a project is as quick as one second. Create Next App has zero dependencies.
-- **Offline Support**: Create Next App will automatically detect if you're offline and bootstrap your project using your local package cache.
-- **Support for Examples**: Create Next App can bootstrap your application using an example from the Next.js examples collection (e.g. `npx create-next-app --example api-routes`).
-- **Tested**: The package is part of the Next.js monorepo and tested using the same integration test suite as Next.js itself, ensuring it works as expected with every release.
+- [ ] Analyze the project
+  - [ ] Check is package.json file exists
+  - [ ] Check if any of these files exists git/.gitignore/.docker/.dockerignore/tsconfig.json/next.config.js/vercel.json
+  - [ ] Handle environment variables (read and apply into system)
+  - [ ] update .gitignore because we use this file to transfer files to the server
+- [ ] CLI tool to authenticate admin (we authenticate user using next-auth)
+  - [ ] Where do we need to use argument parsing
+- [ ] Save admin data into sqlite db using typeorm
+- [ ] Gather website data and save into db
+  - [ ] Website name
+  - [ ] Website type
+    - [ ] node-express
+    - [ ] static
+    - [ ] react
+    - [ ] vue
+    - [ ] angular
+    - [ ] lambda
+    - [ ] static-build
+  - [ ] Entry point file (try to fetch from package.json and it depends on the website type)
+  - [ ] Add necessary changes into package.json like scripts etc.
+- [ ] Select deployment type (pm2/docker-compose/kubernetes)
+- [ ] Show system resources needed for each choice
+- [ ] Add GUI
+- [ ] Domain registration or if existing domain change ns to required values
+  - [ ] Use DIG to check ns
+  - [ ] Get SSL certificated or enable SSL using Cloud Services
+  - [ ] Upload test site into a subdomain and after approvement we will transfer the site to original domain
+- [ ] Get server data (ubuntu default)
+- [ ] Support additional distros
+- [ ] Support Cloud services (Arvan/now/AWS/Google/Azure,...)
+- [ ] Deploy the project
+  - [ ] Offline
+  - [ ] Github repo
+  - [ ] Gitlab repo
+  - [ ] ...
+- [ ] VSCODE Extension
+- [ ] Add modyfire core to any nodejs project

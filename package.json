@@ -1,6 +1,8 @@
 {
   "name": "dploy-node-app",
   "version": "0.0.1-canary.1",
+  "description": "Dploy any Node.js app anywhere with one single command",
+  "main": "./dist/index.js",
   "keywords": [
     "nodejs",
     "react",
@@ -14,12 +16,11 @@
     "kubernetes",
     "microservice"
   ],
-  "description": "Dploy any Node.js app with one command",
   "repository": {
     "type": "git",
     "url": "https://github.com/3dln/dployr"
   },
-  "author": "Ashkan Ashtiani <ashcan@3dln.com>",
+  "author": "Ashkan Ashtiani <ashcan@3dln.com> (https://www.3dln.com)",
   "license": "MIT",
   "bin": {
     "dploy-node-app": "./dist/index.js"
@@ -28,13 +29,13 @@
     "dist"
   ],
   "scripts": {
-    "dev": "ncc build ./index.ts -w -o dist/",
+    "start": "node ./dist/index.js",
+    "dev": "ncc build ./src/index.ts -w -o dist/",
     "prerelease": "rimraf ./dist/",
-    "release": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
+    "release": "ncc build ./src/index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
     "prepublish": "npm run release"
   },
   "devDependencies": {
-    "ts-node": "10.0.0",
     "@types/async-retry": "1.4.2",
     "@types/node": "^16.0.0",
     "@types/prompts": "2.0.13",
@@ -44,13 +45,13 @@
     "@vercel/ncc": "0.28.6",
     "async-retry": "1.3.1",
     "chalk": "4.1.1",
-    "commander": "8.0.0",
     "cpy": "8.1.2",
     "cross-spawn": "7.0.3",
     "got": "11.8.2",
     "prompts": "2.4.1",
     "rimraf": "3.0.2",
     "tar": "6.1.0",
+    "ts-node": "10.0.0",
     "typescript": "4.3.5",
     "update-check": "1.5.4",
     "validate-npm-package-name": "3.0.0"
