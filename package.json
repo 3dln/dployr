@@ -1,6 +1,6 @@
 {
   "name": "dploy-node-app",
-  "version": "0.0.1-canary.1",
+  "version": "0.0.1-canary.2",
   "description": "Dploy any Node.js app anywhere with one single command",
   "main": "./dist/index.js",
   "keywords": [
@@ -56,11 +56,6 @@
     "typescript": "4.3.5",
     "update-check": "1.5.4",
     "validate-npm-package-name": "3.0.0"
-  },
-  "dependencies": {
-    "reflect-metadata": "^0.1.13",
-    "sqlite3": "^5.0.2",
-    "typeorm": "0.2.34"
   },
   "engines": {
     "node": ">=12.0.0"

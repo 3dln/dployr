@@ -29,6 +29,7 @@ npm start
 ### TODO
 
 - [ ] Analyze the project
+  - [ ] support for multiple languages (in cli?)
   - [ ] Check is package.json file exists
   - [ ] Check if any of these files exists git/.gitignore/.docker/.dockerignore/tsconfig.json/next.config.js/vercel.json
   - [ ] Handle environment variables (read and apply into system)
@@ -51,6 +52,7 @@ npm start
 - [ ] Select deployment type (pm2/docker-compose/kubernetes)
 - [ ] Show system resources needed for each choice
 - [ ] Add GUI
+  - [ ] Multi language by default
 - [ ] Domain registration or if existing domain change ns to required values
   - [ ] Use DIG to check ns
   - [ ] Get SSL certificated or enable SSL using Cloud Services
