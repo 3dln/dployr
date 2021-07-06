@@ -42,7 +42,7 @@ async function run(): Promise<void> {
       type: 'text',
       name: 'path',
       message:
-        'Please specify the path to the Node.js project you want to dploy',
+        'Path to the Node.js project?',
       initial: './',
       validate: (path) => {
         // TODO: Let's check if the path is valid
