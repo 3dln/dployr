@@ -1,6 +1,6 @@
 {
   "name": "dploy-node-app",
-  "version": "0.0.1-canary.3",
+  "version": "0.0.1-canary.4",
   "description": "Dploy any Node.js app anywhere with one single command",
   "main": "./dist/index.js",
   "keywords": [
