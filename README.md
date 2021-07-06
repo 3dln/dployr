@@ -29,8 +29,10 @@ npm start
 ### TODO
 
 - [ ] Analyze the project
-  - [ ] support for multiple languages (in cli?)
-  - [ ] Check is package.json file exists
+  - [x] Get the project path from user
+  - [ ] Validate if the specified project path exists
+  - [ ] Check is package.json file exists inside project path
+  - [ ] Log all the steps (passed and failed)
   - [ ] Check if any of these files exists git/.gitignore/.docker/.dockerignore/tsconfig.json/next.config.js/vercel.json
   - [ ] Handle environment variables (read and apply into system)
   - [ ] update .gitignore because we use this file to transfer files to the server
